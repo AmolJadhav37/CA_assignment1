@@ -30,7 +30,7 @@ void initiate_matrix(int **matrix , int flag)
         }
     }
 }
-void tilted_multiplication_order1(int **A,int **B, int **C, int blk)
+void tiled_multiplication_order1(int **A,int **B, int **C, int blk)
 {
     for(int i = 0 ; i < SIZE ; i = i + blk)
     {
@@ -62,5 +62,5 @@ int main()
     initiate_matrix(A,1);
     initiate_matrix(B,1);
     initiate_matrix(C,0);
-    tilted_multiplication_order1(A, B, C,64);
+    tiled_multiplication_order1(A, B, C,64);
 }
