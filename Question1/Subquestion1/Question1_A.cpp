@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define SIZE 2048
+#define SIZE 4096
 void allocate_matrix(int ***ptr)
 {
     *ptr = (int**)malloc(SIZE * sizeof(int *));
@@ -30,20 +30,20 @@ void initiate_matrix(int **matrix , int flag)
         }
     }
 }
-
-void multiplication_order2(int **A, int **B, int **C)
+void multiplication_order1(int **A,int **B,int **C)
 {
-    for(int k = 0 ; k < SIZE ; k++)
+    for(int i = 0 ; i < SIZE ; i++)
     {
-        for(int i = 0 ; i < SIZE ; i++)
+        for(int j = 0 ; j < SIZE ; j++)
         {
-            for(int j = 0 ; j < SIZE ; j++)
+            for(int k = 0 ; k < SIZE ; k++)
             {
                 C[i][j] += A[i][k]*B[k][j];
             }
         }
     }
 }
+
 int main()
 {
     int **A, **B, **C;
@@ -54,5 +54,5 @@ int main()
     initiate_matrix(A,1);
     initiate_matrix(B,1);
     initiate_matrix(C,0);
-
+    multiplication_order1(A, B, C);
 }
