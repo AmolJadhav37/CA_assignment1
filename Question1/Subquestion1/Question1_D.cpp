@@ -32,17 +32,17 @@ void initiate_matrix(int **matrix , int flag)
 }
 void tilted_multiplication_order1(int **A,int **B, int **C, int blk)
 {
-    for(int i = 0 ; i < SIZE ; i = i + blk)
+    for(int k = 0 ; k < SIZE ; k += blk)
     {
-        for(int j = 0 ; j < SIZE ; j += blk)
+        for(int i = 0 ; i < SIZE ; i += blk)
         {
-            for(int k = 0 ; k < SIZE ; k += blk)
+            for(int j = 0 ; j < SIZE ; j += blk)
             {
-                for(int ii = i ; ii < blk ; ii++)
+                for(int kk = k ; kk < blk ; kk++)
                 {
-                    for(int jj = j ; jj < blk ; jj++)
+                    for(int ii = i ; ii < blk ; ii++)
                     {
-                        for(int kk = k ; kk < blk ; kk++)
+                        for(int jj = j ; jj < blk ; jj++)
                         {
                             C[ii][jj] += A[ii][kk] * B[kk][jj];
                         }
