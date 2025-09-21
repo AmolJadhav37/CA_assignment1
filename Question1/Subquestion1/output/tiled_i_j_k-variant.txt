@@ -1,0 +1,31 @@
+Performance counter stats for './Question1_C.out':
+
+         4,465,096      cache-references                                                        (16.72%)
+           119,054      cache-misses                     #    2.67% of all cache refs           (16.94%)
+     1,797,971,957      instructions                     #    1.30  insn per cycle              (21.33%)
+     1,379,854,551      cycles                                                                  (21.55%)
+       405,937,604      L1-dcache-loads                                                         (21.77%)
+         4,894,825      L1-dcache-load-misses            #    1.21% of all L1-dcache accesses   (21.97%)
+       307,982,217      L1-dcache-stores                                                        (21.96%)
+           381,578      L1-icache-load-misses                                                   (17.57%)
+         3,988,736      l2_rqsts.all_demand_miss                                                (17.56%)
+           196,122      l2_rqsts.code_rd_miss                                                   (17.57%)
+           325,570      l2_rqsts.demand_data_rd_miss                                            (17.58%)
+         3,642,797      l2_rqsts.rfo_miss                                                       (17.58%)
+           392,036      LLC-loads                                                               (17.57%)
+           152,375      LLC-load-misses                  #   38.87% of all LL-cache accesses    (17.56%)
+         3,666,467      LLC-stores                                                              (8.80%)
+                 0      LLC-store-misses                                                        (8.79%)
+       425,653,809      dTLB-loads                                                              (13.19%)
+           160,678      dTLB-load-misses                 #    0.04% of all dTLB cache accesses  (17.61%)
+       320,522,771      dTLB-stores                                                             (17.56%)
+           250,420      dTLB-store-misses                                                       (17.39%)
+            97,178      iTLB-load-misses                                                        (17.17%)
+            49,348      page-faults                                                           
+       387,168,274      branches                                                                (16.93%)
+           752,193      branch-misses                    #    0.19% of all branches             (16.73%)
+
+       0.456020837 seconds time elapsed
+
+       0.360997000 seconds user
+       0.094999000 seconds sys
