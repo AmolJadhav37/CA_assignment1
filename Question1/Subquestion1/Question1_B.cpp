@@ -54,5 +54,5 @@ int main()
     initiate_matrix(A,1);
     initiate_matrix(B,1);
     initiate_matrix(C,0);
-
+    
 }
