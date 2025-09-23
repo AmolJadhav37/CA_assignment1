@@ -39,3 +39,14 @@ perf stat \
   -e branch-loads \
   -e branch-load-misses \
     ./bfs -g 25 -n 1
+
+
+### standard roofline intensity:
+
+arithmatic intensity = FLOPs / Bytes accessed from DRAM 
+
+### intensity for BFS 
+
+BFS don't have floating point operations so we are considering edges traversed per second as total work done. 
+
+hence , Intensity = Edges Traversed / Bytes accessed from DRAM 

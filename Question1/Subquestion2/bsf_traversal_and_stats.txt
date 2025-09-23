@@ -13,6 +13,7 @@ Performance = Traversed edges per second = total number of edges / Trial time
                                          = 3384893315.663585235
                                          = 3.38 Giga Edges per second
 
+the bfs algorithm is traversing 3.38 Giga Edges per second 
 
 
 
@@ -41,3 +42,11 @@ Performance = Traversed edges per second = total number of edges / Trial time
 
      424.656733000 seconds user
       11.021649000 seconds sys
+
+Bytes accessed from DRAM = missed in LLC * block cache block size (64)
+                         = 697,134,995  * 64 
+                         = 44.6GB
+                         
+intensity = Edges Traversed / Bytes accessed from DRAM 
+          = 523609147 / 44.6GB
+          = 0.011735737  edges per Byte
