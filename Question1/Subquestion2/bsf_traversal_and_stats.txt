@@ -1,0 +1,43 @@
+$ ./bfs -g 25 -n 1
+
+output: 
+
+Generate Time:       8.93086
+Build Time:          15.85483
+Graph has 33554432 nodes and 523609147 undirected edges for degree: 15
+Trial Time:          0.15469
+Average Time:        0.15469
+
+Performance = Traversed edges per second = total number of edges / Trial time
+                                         = 523609147 / 0.15469
+                                         = 3384893315.663585235
+                                         = 3.38 Giga Edges per second
+
+
+
+
+ Performance counter stats for './bfs -g 25 -n 1':
+
+ 1,465,595,669,466      cpu-cycles                                                              (23.53%)
+   702,072,053,801      instructions                     #    0.48  insn per cycle              (29.41%)
+     8,629,830,512      cache-references                                                        (29.41%)
+     1,066,358,502      cache-misses                     #   12.36% of all cache refs           (29.41%)
+    79,799,176,010      L1-dcache-loads                                                         (29.41%)
+    10,303,662,026      L1-dcache-load-misses            #   12.91% of all L1-dcache accesses   (29.41%)
+    39,188,727,871      L1-dcache-stores                                                        (23.53%)
+   <not supported>      L1-dcache-store-misses                                                
+     1,788,830,243      l2_rqsts.demand_data_rd_hit                                             (23.53%)
+     4,369,021,338      l2_rqsts.demand_data_rd_miss                                            (23.53%)
+     4,389,571,188      LLC-loads                                                               (23.53%)
+       697,134,995      LLC-load-misses                  #   15.88% of all LL-cache accesses    (23.53%)
+     3,471,129,182      LLC-stores                                                              (11.77%)
+                 0      LLC-store-misses                                                        (11.77%)
+    79,740,331,410      dTLB-loads                                                              (17.64%)
+     4,005,379,225      dTLB-load-misses                 #    5.02% of all dTLB cache accesses  (23.52%)
+    82,395,248,489      branch-loads                                                            (23.52%)
+     9,083,423,540      branch-load-misses                                                      (23.52%)
+
+      29.189455020 seconds time elapsed
+
+     424.656733000 seconds user
+      11.021649000 seconds sys
