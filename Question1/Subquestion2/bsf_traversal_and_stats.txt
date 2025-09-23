@@ -46,7 +46,9 @@ the bfs algorithm is traversing 3.38 Giga Edges per second
 Bytes accessed from DRAM = missed in LLC * block cache block size (64)
                          = 697,134,995  * 64 
                          = 44.6GB
-                         
+
 intensity = Edges Traversed / Bytes accessed from DRAM 
           = 523609147 / 44.6GB
           = 0.011735737  edges per Byte
+
+(the defination of intensity is in readme.md file )
