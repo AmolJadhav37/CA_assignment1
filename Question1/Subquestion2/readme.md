@@ -1,7 +1,7 @@
 ### clone the gaps repository using following command 
 
 ```bash
-    $ git clone https://github.com/sbeamer/gapbs.git
+    git clone https://github.com/sbeamer/gapbs.git
 ```
 
 ### build the project using built in makefile
@@ -13,7 +13,7 @@
 ### run BFS on 2^25 vertices vertices for 1 iteration
 
 ```bash
-     ./bfs -g 25 -n 1
+    ./bfs -g 25 -n 1
 ```
 here 25 reperesents the 2^25 vertices and 1 represent the number of interation 
 
