@@ -1,0 +1,69 @@
+perf stat -e instructions,cycles -I 1000 ./streamcluster 10 20 256 32768 32768 5000 none output.txt 1
+
+PARSEC Benchmark Suite Version 3.0-beta-20120904
+read 32768 points
+#           time             counts unit events
+     1.001073012      3,424,424,339      instructions                     #    0.96  insn per cycle            
+     1.001073012      3,557,570,271      cycles                                                                
+     2.002217629      3,881,256,393      instructions                     #    0.84  insn per cycle            
+     2.002217629      4,624,563,169      cycles                                                                
+     3.003321140      3,967,673,214      instructions                     #    0.84  insn per cycle            
+     3.003321140      4,737,262,532      cycles                                                                
+     4.003953866      3,964,823,619      instructions                     #    0.84  insn per cycle            
+     4.003953866      4,731,738,680      cycles                                                                
+     5.005081366      3,930,179,993      instructions                     #    0.84  insn per cycle            
+     5.005081366      4,681,621,098      cycles                                                                
+     6.006190655      3,970,991,945      instructions                     #    0.84  insn per cycle            
+     6.006190655      4,730,923,124      cycles                                                                
+     7.007294312      3,981,982,971      instructions                     #    0.84  insn per cycle            
+     7.007294312      4,754,839,270      cycles                                                                
+     8.008406708      3,987,949,026      instructions                     #    0.84  insn per cycle            
+     8.008406708      4,762,018,833      cycles                                                                
+     9.009546388      3,979,594,144      instructions                     #    0.84  insn per cycle            
+     9.009546388      4,743,363,564      cycles                                                                
+    10.010682402      3,939,789,075      instructions                     #    0.84  insn per cycle            
+    10.010682402      4,684,946,092      cycles                                                                
+    11.011790497      3,984,613,064      instructions                     #    0.84  insn per cycle            
+    11.011790497      4,748,242,374      cycles                                                                
+    12.012916114      3,985,633,391      instructions                     #    0.84  insn per cycle            
+    12.012916114      4,758,751,585      cycles                                                                
+    13.014051736      3,973,695,249      instructions                     #    0.84  insn per cycle            
+    13.014051736      4,733,418,769      cycles                                                                
+    14.015160709      3,988,648,447      instructions                     #    0.84  insn per cycle            
+    14.015160709      4,752,970,373      cycles                                                                
+    15.016297112      3,959,543,061      instructions                     #    0.84  insn per cycle            
+    15.016297112      4,711,833,227      cycles                                                                
+    16.017435357      3,954,603,959      instructions                     #    0.84  insn per cycle            
+    16.017435357      4,705,197,203      cycles                                                                
+    16.140337361        455,311,835      instructions                     #    0.86  insn per cycle            
+    16.140337361        530,924,346      cycles 
+
+
+
+=== STREAMCLUSTER IPC ANALYSIS ===
+Total execution time: 16.14 seconds
+Total instructions: 63,330,713,725 (63.3B)
+Average IPC: 0.847342
+Maximum IPC: 0.962574
+Minimum IPC: 0.837449
+IPC Standard Deviation: 0.029156
+
+Detailed IPC values:
+Time:    1.001s | IPC: 0.96257391
+Time:    2.002s | IPC: 0.83926984
+Time:    3.003s | IPC: 0.83754556
+Time:    4.004s | IPC: 0.83792109
+Time:    5.005s | IPC: 0.83949126
+Time:    6.006s | IPC: 0.83936937
+Time:    7.007s | IPC: 0.83745901
+Time:    8.008s | IPC: 0.83744923
+Time:    9.010s | IPC: 0.83898147
+Time:   10.011s | IPC: 0.84094651
+Time:   11.012s | IPC: 0.83917643
+Time:   12.013s | IPC: 0.83753760
+Time:   13.014s | IPC: 0.83949793
+Time:   14.015s | IPC: 0.83919068
+Time:   15.016s | IPC: 0.84034024
+Time:   16.017s | IPC: 0.84047571
+Time:   16.140s | IPC: 0.85758327
+

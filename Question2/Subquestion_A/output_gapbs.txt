@@ -1,0 +1,140 @@
+perf stat -e instructions,cycles -I 1000 ./bfs -g 25 -n 1
+
+     time             counts unit events
+     1.001752858     57,204,470,170      instructions                     #    1.40  insn per cycle            
+     1.001752858     40,804,729,383      cycles                                                                
+     2.012756545     69,511,600,060      instructions                     #    1.40  insn per cycle            
+     2.012756545     49,568,010,553      cycles                                                                
+     3.013756583     69,681,187,247      instructions                     #    1.40  insn per cycle            
+     3.013756583     49,703,936,956      cycles                                                                
+     4.014764190     69,118,110,290      instructions                     #    1.40  insn per cycle            
+     4.014764190     49,289,834,058      cycles                                                                
+     5.015757885     69,495,507,907      instructions                     #    1.40  insn per cycle            
+     5.015757885     49,582,058,667      cycles                                                                
+     6.016758140     69,674,324,984      instructions                     #    1.40  insn per cycle            
+     6.016758140     49,701,776,424      cycles                                                                
+     7.017754754     69,720,662,894      instructions                     #    1.40  insn per cycle            
+     7.017754754     49,737,278,504      cycles                                                                
+     8.018757149     69,562,527,874      instructions                     #    1.40  insn per cycle            
+     8.018757149     49,645,374,296      cycles                                                                
+     9.019778073     11,034,623,135      instructions                     #    0.45  insn per cycle            
+     9.019778073     24,375,750,554      cycles                                                                
+    10.020776725      3,720,978,169      instructions                     #    0.08  insn per cycle            
+    10.020776725     49,531,485,554      cycles                                                                
+Generate Time:       10.05114
+
+    11.022781226      4,622,817,758      instructions                     #    0.10  insn per cycle            
+    11.022781226     48,491,644,317      cycles                                                                
+    12.023777571      2,099,355,802      instructions                     #    0.04  insn per cycle            
+    12.023777571     49,463,234,324      cycles                                                                
+    13.024788873      2,106,823,064      instructions                     #    0.04  insn per cycle            
+    13.024788873     49,658,447,284      cycles                                                                
+    14.025773789      2,083,981,277      instructions                     #    0.04  insn per cycle            
+    14.025773789     49,221,158,430      cycles                                                                
+    15.026758532      5,590,448,914      instructions                     #    0.12  insn per cycle            
+    15.026758532     45,052,922,410      cycles                                                                
+    16.027773993        962,480,723      instructions                     #    0.02  insn per cycle            
+    16.027773993     42,223,052,687      cycles                                                                
+    17.029762436        959,161,829      instructions                     #    0.02  insn per cycle            
+    17.029762436     43,560,861,926      cycles                                                                
+    18.030761662      1,015,154,064      instructions                     #    0.02  insn per cycle            
+    18.030761662     46,906,109,626      cycles                                                                
+    19.031777759      1,071,147,797      instructions                     #    0.02  insn per cycle            
+    19.031777759     49,433,329,237      cycles                                                                
+    20.032764175        979,008,903      instructions                     #    0.02  insn per cycle            
+    20.032764175     47,252,866,879      cycles                                                                
+    21.033761719        959,314,361      instructions                     #    0.02  insn per cycle            
+    21.033761719     47,259,661,117      cycles                                                                
+    22.034755720        897,281,071      instructions                     #    0.02  insn per cycle            
+    22.034755720     43,410,868,113      cycles                                                                
+    23.035766591        860,775,445      instructions                     #    0.02  insn per cycle            
+    23.035766591     42,302,813,224      cycles                                                                
+    24.037769345      1,157,317,609      instructions                     #    0.02  insn per cycle            
+    24.037769345     47,825,575,548      cycles                                                                
+    25.038774034      1,026,458,662      instructions                     #    0.02  insn per cycle            
+    25.038774034     48,945,567,071      cycles                                                                
+    26.039767837      1,096,965,893      instructions                     #    0.02  insn per cycle            
+    26.039767837     48,239,363,977      cycles                                                                
+#           time             counts unit events
+    27.040759396        898,607,200      instructions                     #    0.02  insn per cycle            
+    27.040759396     43,650,791,241      cycles                                                                
+    28.041766809        810,339,844      instructions                     #    0.02  insn per cycle            
+    28.041766809     39,033,263,220      cycles                                                                
+    29.042764348        973,719,067      instructions                     #    0.02  insn per cycle            
+    29.042764348     48,551,694,132      cycles                                                                
+    30.043772207        963,098,689      instructions                     #    0.02  insn per cycle            
+    30.043772207     48,527,562,758      cycles                                                                
+    31.044826764        789,671,740      instructions                     #    0.02  insn per cycle            
+    31.044826764     38,484,358,454      cycles                                                                
+Build Time:          21.69119
+
+    32.046754355      5,331,964,514      instructions                     #    0.36  insn per cycle            
+    32.046754355     14,622,764,315      cycles                                                                
+    33.047759654     24,451,312,714      instructions                     #    0.54  insn per cycle            
+    33.047759654     45,155,929,722      cycles                                                                
+    34.048759106     19,482,097,837      instructions                     #    0.54  insn per cycle            
+    34.048759106     36,187,248,836      cycles                                                                
+    35.049758723     22,536,041,578      instructions                     #    0.54  insn per cycle            
+    35.049758723     41,596,203,887      cycles                                                                
+    36.050765682     22,224,332,691      instructions                     #    0.54  insn per cycle            
+    36.050765682     41,224,588,059      cycles                                                                
+    37.051808251     12,143,943,143      instructions                     #    0.47  insn per cycle            
+    37.051808251     25,744,886,857      cycles 
+
+Graph has 33554432 nodes and 523609147 undirected edges for degree: 15
+
+Trial Time:          0.21328
+
+Average Time:        0.21328
+    37.482890008      5,098,656,202      instructions                     #    0.54  insn per cycle            
+    37.482890008      9,416,247,130      cycle
+
+
+
+
+=== BFS IPC Analysis ===
+Total execution time: 37.48 seconds
+Total instructions: 701,916,271,121
+Average IPC: 0.420203
+Maximum IPC: 1.402348
+Minimum IPC: 0.019846
+
+Detailed IPC values:
+Time:    1.002s | IPC: 1.40190784
+Time:    2.013s | IPC: 1.40234799
+Time:    3.014s | IPC: 1.40192491
+Time:    4.015s | IPC: 1.40227922
+Time:    5.016s | IPC: 1.40162611
+Time:    6.017s | IPC: 1.40184778
+Time:    7.018s | IPC: 1.40177881
+Time:    8.019s | IPC: 1.40118851
+Time:    9.020s | IPC: 0.45268855
+Time:   10.021s | IPC: 0.07512349
+Time:   11.023s | IPC: 0.09533225
+Time:   12.024s | IPC: 0.04244275
+Time:   13.025s | IPC: 0.04242628
+Time:   14.026s | IPC: 0.04233914
+Time:   15.027s | IPC: 0.12408627
+Time:   16.028s | IPC: 0.02279515
+Time:   17.030s | IPC: 0.02201889
+Time:   18.031s | IPC: 0.02164226
+Time:   19.032s | IPC: 0.02166853
+Time:   20.033s | IPC: 0.02071851
+Time:   21.034s | IPC: 0.02029880
+Time:   22.035s | IPC: 0.02066950
+Time:   23.036s | IPC: 0.02034795
+Time:   24.038s | IPC: 0.02419872
+Time:   25.039s | IPC: 0.02097143
+Time:   26.040s | IPC: 0.02274006
+Time:   27.041s | IPC: 0.02058628
+Time:   28.042s | IPC: 0.02076024
+Time:   29.043s | IPC: 0.02005531
+Time:   30.044s | IPC: 0.01984643
+Time:   31.045s | IPC: 0.02051929
+Time:   32.047s | IPC: 0.36463451
+Time:   33.048s | IPC: 0.54148620
+Time:   34.049s | IPC: 0.53836913
+Time:   35.050s | IPC: 0.54178121
+Time:   36.051s | IPC: 0.53910381
+Time:   37.052s | IPC: 0.47170311
+Time:   37.483s | IPC: 0.54147434
