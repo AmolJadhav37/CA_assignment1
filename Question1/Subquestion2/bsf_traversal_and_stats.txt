@@ -52,3 +52,6 @@ intensity = Edges Traversed / Bytes accessed from DRAM
           = 0.011735737  edges per Byte
 
 (the defination of intensity is in readme.md file )
+
+
+vaishnavi
