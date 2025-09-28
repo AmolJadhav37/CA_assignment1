@@ -8,7 +8,7 @@ Graph has 33554432 nodes and 523609147 undirected edges for degree: 15
 Trial Time:          0.15469
 Average Time:        0.15469
 
-Performance = Traversed edges per second = cdtotal number of edges / Trial time
+Performance = Traversed edges per second = total number of edges / Trial time
                                          = 523609147 / 0.15469
                                          = 3384893315.663585235
                                          = 3.38 Giga Edges per second
@@ -42,7 +42,6 @@ the bfs algorithm is traversing 3.38 Giga Edges per second
 
      424.656733000 seconds user
       11.021649000 seconds sys
-
 
 Bytes accessed from DRAM = missed in LLC * block cache block size (64)
                          = 697,134,995  * 64 
