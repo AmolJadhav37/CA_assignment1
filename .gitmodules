@@ -1,0 +1,6 @@
+[submodule "Question2/Subquestion_A/Question2/Subquestion_A/parsec-benchmark"]
+	path = Question2/Subquestion_A/Question2/Subquestion_A/parsec-benchmark
+	url = https://github.com/bamos/parsec-benchmark.git
+[submodule "Question2/Subquestion_A/Question2/Subquestion_A/gapbs"]
+	path = Question2/Subquestion_A/Question2/Subquestion_A/gapbs
+	url = https://github.com/sbeamer/gapbs.git
