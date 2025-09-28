@@ -1,0 +1,208 @@
+CPI Stack Regression Analysis Tool
+==================================================
+
+============================================================
+ANALYZING STREAMCLUSTER BENCHMARK
+============================================================
+
+=== Parsing Streamcluster data from /home/amoljadhav/assignments/CA_assignment1/Question2/Subquestion_A/parsec-benchmark/streamcluster_detailed_data.txt ===
+Successfully parsed 1342 data points
+Available counters: ['instructions', 'cycles', 'cache-references', 'cache-misses', 'L1-dcache-loads', 'L1-dcache-load-misses', 'L1-dcache-stores', 'supported>', 'L1-icache-load-misses', 'LLC-loads', 'LLC-load-misses', 'LLC-stores', 'LLC-store-misses', 'dTLB-loads', 'dTLB-load-misses', 'dTLB-stores', 'dTLB-store-misses', 'iTLB-loads', 'iTLB-load-misses', 'branches', 'branch-misses', 'branch-loads']
+
+=== Preparing regression data for Streamcluster ===
+Features for regression: ['L1_dcache_miss_rate', 'L1_icache_miss_rate', 'LLC_miss_rate', 'cache_miss_rate', 'dTLB_miss_rate', 'iTLB_miss_rate', 'branch_miss_rate', 'dTLB_store_miss_rate']
+Data points after cleaning: 1164
+CPI range: 0.9840 - 1.1095
+
+=== Building regression model for Streamcluster ===
+Model built successfully with 1164 samples and 8 features
+
+============================================================
+CPI STACK REGRESSION RESULTS FOR STREAMCLUSTER
+============================================================
+
+Model Equation:
+CPI = 0.825894 + 0.300715 * L1_dcache_miss_rate + 329.041218 * L1_icache_miss_rate + 0.079120 * LLC_miss_rate + 0.000000 * cache_miss_rate + 8.965639 * dTLB_miss_rate + 0.000000 * iTLB_miss_rate + 2.583096 * branch_miss_rate + 5.070051 * dTLB_store_miss_rate
+
+Coefficients (CPI Stack Components):
+Component                      Coefficient     Interpretation
+----------------------------------------------------------------------
+Base CPI (Intercept)           0.825894        Perfect execution
+L1_dcache_miss_rate            0.300715        L1 data cache penalty
+L1_icache_miss_rate            329.041218      L1 instruction cache penalty
+LLC_miss_rate                  0.079120        Last level cache penalty
+cache_miss_rate                0.000000        General cache penalty
+dTLB_miss_rate                 8.965639        Data TLB penalty
+iTLB_miss_rate                 0.000000        Instruction TLB penalty
+branch_miss_rate               2.583096        Branch misprediction penalty
+dTLB_store_miss_rate           5.070051        Store TLB penalty
+
+Model Quality Metrics:
+RMSE:                     0.014873
+MAE:                      0.009759
+R²:                       0.328966
+Adjusted R²:              0.324318
+F-statistic:              70.78
+p-value:                  1.11e-16
+Number of samples:        1164
+Number of features:       8
+
+Model Quality Interpretation:
+- Poor model fit (R² < 0.4)
+- Model is highly statistically significant (p < 0.01)
+
+=== Phase Analysis for Streamcluster ===
+
+Phase_1 (samples 0-387):
+  Mean CPI:     1.0455 ± 0.0235
+  Mean L1_dcache_miss_rate : 0.109366 ± 0.004184
+  Mean L1_icache_miss_rate : 0.000108 ± 0.000011
+  Mean LLC_miss_rate       : 0.871861 ± 0.011323
+  Mean cache_miss_rate     : 0.841834 ± 0.009217
+  Mean dTLB_miss_rate      : 0.003570 ± 0.000271
+  Mean iTLB_miss_rate      : 5.906430 ± 7.432076
+  Mean branch_miss_rate    : 0.017010 ± 0.004911
+  Mean dTLB_store_miss_rate: 0.001358 ± 0.000324
+
+Phase_2 (samples 388-775):
+  Mean CPI:     1.0501 ± 0.0135
+  Mean L1_dcache_miss_rate : 0.108253 ± 0.002718
+  Mean L1_icache_miss_rate : 0.000105 ± 0.000007
+  Mean LLC_miss_rate       : 0.873480 ± 0.008176
+  Mean cache_miss_rate     : 0.839772 ± 0.007114
+  Mean dTLB_miss_rate      : 0.003513 ± 0.000262
+  Mean iTLB_miss_rate      : 5.282230 ± 3.411678
+  Mean branch_miss_rate    : 0.018724 ± 0.002605
+  Mean dTLB_store_miss_rate: 0.001422 ± 0.000255
+
+Phase_3 (samples 776-1163):
+  Mean CPI:     1.0497 ± 0.0157
+  Mean L1_dcache_miss_rate : 0.108184 ± 0.002802
+  Mean L1_icache_miss_rate : 0.000107 ± 0.000008
+  Mean LLC_miss_rate       : 0.875587 ± 0.008926
+  Mean cache_miss_rate     : 0.842691 ± 0.006803
+  Mean dTLB_miss_rate      : 0.003541 ± 0.000251
+  Mean iTLB_miss_rate      : 6.676155 ± 6.778380
+  Mean branch_miss_rate    : 0.018588 ± 0.002791
+  Mean dTLB_store_miss_rate: 0.001456 ± 0.000228
+Plot saved as: streamcluster_cpi_analysis.png
+
+============================================================
+ANALYZING GAP BFS BENCHMARK
+============================================================
+
+=== Parsing GAP_BFS data from /home/amoljadhav/assignments/CA_assignment1/Question2/Subquestion_A/gapbs/gap_bfs_data.txt ===
+Successfully parsed 323 data points
+Available counters: ['cache-references', 'cache-misses', 'instructions', 'cycles', 'L1-dcache-loads', 'L1-dcache-load-misses', 'L1-dcache-stores', 'L1-icache-load-misses', 'LLC-loads', 'LLC-load-misses', 'LLC-stores', 'LLC-store-misses', 'dTLB-loads', 'dTLB-load-misses', 'dTLB-stores', 'dTLB-store-misses', 'iTLB-loads', 'iTLB-load-misses', 'page-faults', 'branches', 'branch-misses']
+
+=== Preparing regression data for GAP_BFS ===
+Features for regression: ['L1_dcache_miss_rate', 'L1_icache_miss_rate', 'LLC_miss_rate', 'cache_miss_rate', 'dTLB_miss_rate', 'iTLB_miss_rate', 'branch_miss_rate', 'dTLB_store_miss_rate']
+Data points after cleaning: 313
+CPI range: 0.4265 - 44.5541
+
+=== Building regression model for GAP_BFS ===
+Model built successfully with 313 samples and 8 features
+
+============================================================
+CPI STACK REGRESSION RESULTS FOR GAP_BFS
+============================================================
+
+Model Equation:
+CPI = 1.093210 + 0.000000 * L1_dcache_miss_rate + 904.596881 * L1_icache_miss_rate + 0.000000 * LLC_miss_rate + 0.000000 * cache_miss_rate + 52.748322 * dTLB_miss_rate + 0.000000 * iTLB_miss_rate + 0.000000 * branch_miss_rate + 41.634327 * dTLB_store_miss_rate
+
+Coefficients (CPI Stack Components):
+Component                      Coefficient     Interpretation
+----------------------------------------------------------------------
+Base CPI (Intercept)           1.093210        Perfect execution
+L1_dcache_miss_rate            0.000000        L1 data cache penalty
+L1_icache_miss_rate            904.596881      L1 instruction cache penalty
+LLC_miss_rate                  0.000000        Last level cache penalty
+cache_miss_rate                0.000000        General cache penalty
+dTLB_miss_rate                 52.748322       Data TLB penalty
+iTLB_miss_rate                 0.000000        Instruction TLB penalty
+branch_miss_rate               0.000000        Branch misprediction penalty
+dTLB_store_miss_rate           41.634327       Store TLB penalty
+
+Model Quality Metrics:
+RMSE:                     2.614589
+MAE:                      1.555303
+R²:                       0.980291
+Adjusted R²:              0.979773
+F-statistic:              1890.09
+p-value:                  1.11e-16
+Number of samples:        313
+Number of features:       8
+
+Model Quality Interpretation:
+- Excellent model fit (R² > 0.8)
+- Model is highly statistically significant (p < 0.01)
+
+=== Phase Analysis for GAP_BFS ===
+
+Phase_1 (samples 0-103):
+  Mean CPI:     3.8003 ± 6.0604
+  Mean L1_dcache_miss_rate : 0.142892 ± 0.252125
+  Mean L1_icache_miss_rate : 0.000470 ± 0.000636
+  Mean LLC_miss_rate       : 0.066524 ± 0.087558
+  Mean cache_miss_rate     : 0.057410 ± 0.098971
+  Mean dTLB_miss_rate      : 0.058979 ± 0.108785
+  Mean iTLB_miss_rate      : 8.864268 ± 6.686250
+  Mean branch_miss_rate    : 0.058775 ± 0.034892
+  Mean dTLB_store_miss_rate: 0.000787 ± 0.003171
+
+Phase_2 (samples 104-207):
+  Mean CPI:     36.0032 ± 8.8477
+  Mean L1_dcache_miss_rate : 0.638012 ± 0.127510
+  Mean L1_icache_miss_rate : 0.006875 ± 0.002666
+  Mean LLC_miss_rate       : 0.156879 ± 0.075786
+  Mean cache_miss_rate     : 0.095959 ± 0.029422
+  Mean dTLB_miss_rate      : 0.266804 ± 0.032668
+  Mean iTLB_miss_rate      : 15.406222 ± 11.721049
+  Mean branch_miss_rate    : 0.003050 ± 0.001016
+  Mean dTLB_store_miss_rate: 0.338204 ± 0.171531
+
+Phase_3 (samples 208-312):
+  Mean CPI:     21.2976 ± 20.2529
+  Mean L1_dcache_miss_rate : 0.376249 ± 0.339169
+  Mean L1_icache_miss_rate : 0.003390 ± 0.003321
+  Mean LLC_miss_rate       : 0.246153 ± 0.097961
+  Mean cache_miss_rate     : 0.275704 ± 0.177705
+  Mean dTLB_miss_rate      : 0.143051 ± 0.142175
+  Mean iTLB_miss_rate      : 13.779335 ± 8.739416
+  Mean branch_miss_rate    : 0.081975 ± 0.098347
+  Mean dTLB_store_miss_rate: 0.222647 ± 0.228992
+Plot saved as: gap_bfs_cpi_analysis.png
+
+============================================================
+BENCHMARK COMPARISON SUMMARY
+============================================================
+
+Comparison Table:
+    Benchmark     R²   RMSE  Adj_R²  Mean_CPI  Features
+Streamcluster 0.3290 0.0149  0.3243    1.0484         8
+      GAP_BFS 0.9803 2.6146  0.9798   20.3700         8
+
+Key Observations:
+- Streamcluster Mean CPI: 1.0484
+- GAP BFS Mean CPI: 20.3700
+- GAP BFS has 1842.9% higher CPI than Streamcluster
+
+============================================================
+ANALYSIS COMPLETE!
+============================================================
+
+Generated Files:
+✓ streamcluster_cpi_analysis.png
+✓ gap_bfs_cpi_analysis.png
+
+You can view these plots to analyze:
+1. CPI prediction accuracy
+2. Model residuals
+3. CPI stack components (coefficients)
+4. CPI variation over time
+
+For your report, focus on:
+- Compare R² values between benchmarks
+- Analyze which miss types have highest coefficients
+- Discuss phase differences in CPI behavior
+- Compare overall CPI characteristics between workloads
