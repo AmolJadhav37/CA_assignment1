@@ -52,3 +52,5 @@ BFS don't have floating point operations so we are considering edges traversed p
 hence , Intensity = Edges Traversed / Bytes accessed from DRAM 
 
 for the roofline graphs of both the benchmakrs we used google collab and for python code generation we used ClAUDE.ai and contructed the graphs for the analysis 
+
+to write the code of normal BFS we took the help of AI it is not completly done by ourself 
