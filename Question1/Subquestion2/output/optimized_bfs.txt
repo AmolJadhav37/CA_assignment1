@@ -1,0 +1,23 @@
+optimized BFS is the code from GAP benchmark
+
+perf stat -e cache-references,cache-misses,instructions,cycles,branches,branch-misses,page-faults ./bfs -g 25 -n 1
+Generate Time:       8.88790
+Build Time:          15.71727
+Graph has 33554432 nodes and 523609147 undirected edges for degree: 15
+Trial Time:          0.15767
+Average Time:        0.15767
+
+ Performance counter stats for './bfs -g 25 -n 1':
+
+     8,613,474,331      cache-references                                                        (83.34%)
+     1,065,731,569      cache-misses                     #   12.37% of all cache refs           (66.67%)
+   702,280,639,020      instructions                     #    0.48  insn per cycle              (83.33%)
+ 1,461,203,105,456      cycles                                                                  (83.34%)
+    82,305,437,395      branches                                                                (83.33%)
+     9,080,609,562      branch-misses                    #   11.03% of all branches             (83.33%)
+         3,519,168      page-faults                                                           
+
+      29.013294250 seconds time elapsed
+
+     423.438193000 seconds user
+      10.267354000 seconds sys

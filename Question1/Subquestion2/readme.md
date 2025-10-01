@@ -50,3 +50,5 @@ arithmatic intensity = FLOPs / Bytes accessed from DRAM
 BFS don't have floating point operations so we are considering edges traversed per second as total work done. 
 
 hence , Intensity = Edges Traversed / Bytes accessed from DRAM 
+
+for the roofline graphs of both the benchmakrs we used google collab and for python code generation we used ClAUDE.ai and contructed the graphs for the analysis 

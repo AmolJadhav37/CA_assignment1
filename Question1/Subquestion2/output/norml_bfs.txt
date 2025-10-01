@@ -1,0 +1,24 @@
+perf stat -e cache-references,cache-misses,instructions,cycles,branches,branch-misses,page-faults ./bfs.out -g 25 -n 1
+Generating Kronecker graph with scale 25...
+Graph generated: 33554432 vertices, 536867447 edges
+Generation time: 294.347 seconds
+
+Trial 1...
+  BFS time: 5.53075 seconds
+  Reachable vertices: 14118864
+
+
+ Performance counter stats for './bfs.out -g 25 -n 1':
+
+     3,942,723,125      cache-references                                                        (83.33%)
+     1,195,778,755      cache-misses                     #   30.33% of all cache refs           (66.67%)
+ 1,478,955,921,304      instructions                     #    1.36  insn per cycle              (83.33%)
+ 1,084,548,580,564      cycles                                                                  (83.33%)
+   159,338,438,983      branches                                                                (83.33%)
+    10,088,487,627      branch-misses                    #    6.33% of all branches             (83.33%)
+         1,048,208      page-faults                                                           
+
+     304.455276922 seconds time elapsed
+
+     302.212064000 seconds user
+       2.189638000 seconds sys
